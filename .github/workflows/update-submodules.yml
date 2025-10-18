@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.2.2
 
       - name: Set up Git
         run: |
@@ -28,8 +28,6 @@ jobs:
           git add .
           git submodule update --init --recursive --remote Tweaks/PSHeader
           git add .
-          git submodule update --init --recursive --remote Tweaks/Return-YouTube-Dislikes
-          git add .
           git submodule update --init --recursive --remote Tweaks/YTABConfig
           git add .
           git submodule update --init --recursive --remote Tweaks/YTUHD
@@ -42,11 +40,15 @@ jobs:
           git add .
           git submodule update --init --recursive --remote Tweaks/YouQuality
           git add .
+          git submodule update --init --recursive --remote Tweaks/YouTimeStamp
+          git add .
           git submodule update --init --recursive --remote Tweaks/YouGroupSettings
           git add .
           git submodule update --init --recursive --remote Tweaks/YouTubeHeader
           git add .
           git submodule update --init --recursive --remote Tweaks/iSponsorBlock
+          git add .
+          git submodule update --init --recursive --remote Tweaks/protobuf
           git add .
           git submodule update --init --recursive
           git commit -m "updated submodules"
